@@ -53,7 +53,8 @@ const session = await stripe.checkout.sessions.create({
     line_items: transformedItems,
 
     mode: 'payment',
-    success_url: `${process.env.HOST}/success`,
+    // success_url: `${process.env.HOST}/success`,
+    success_url: `https://amazon2-one.vercel.app//success`,
     cancel_url: `${process.env.HOST}/checkout`,
     metadata: {
         email,
